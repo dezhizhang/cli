@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 // 1) 配置可执行命令commander
-const program = require('commander')
+const program = require('commander');
+const chalk = require('chalk');
 
 // 创建项目
 program
@@ -9,7 +10,7 @@ program
     .description('create a new project')
     .option('-f, --force','overwrite target directory if it exists')
     .action((name,cmd) => {
-        console.log(name,cmd)
+        require('../lib/create')(name,cmd);
     })
 
 // 添加配置参数
@@ -23,9 +24,24 @@ program
         console.log(value,cmd)
     })
 
+
+program
+    .command('ui')
+    .description('start and open three-cli ui')
+    .option('-p --port <port>','port used form ui server')
+    .action((cmd) => {
+        console.log(cmd)
+    })
+
 program
     .version(`cli@${require('../package.json').version}`)
     .usage(`<command> [option]`)
+
+program.on('--help',() => {
+    console.log()
+    console.log(`run ${chalk.blue('three-cli <command> --help')} show detail`)
+    console.log()
+})
 
 
 
