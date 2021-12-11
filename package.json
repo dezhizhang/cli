@@ -1,5 +1,5 @@
 {
-  "name": "util-cli",
+  "name": "three-cli",
   "version": "1.0.0",
   "main": "index.js",
   "bin": "./bin/cli",

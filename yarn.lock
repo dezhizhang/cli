@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-commander@^8.3.0:
-  version "8.3.0"
-  resolved "https://rg.cnpmjs.org/commander/download/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
-  integrity sha1-SDfqGy2me5xhamevuw+v7lZ7ymY=
+"commander@^8.3.0":
+  "integrity" "sha1-SDfqGy2me5xhamevuw+v7lZ7ymY="
+  "resolved" "https://rg.cnpmjs.org/commander/download/commander-8.3.0.tgz"
+  "version" "8.3.0"
